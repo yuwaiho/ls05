@@ -29,13 +29,13 @@ module.exports.bootstrap = async function (done) {
 
   sails.getInvalidIdMsg = function (opts) {
 
-    if (opts.id != undefined && isNaN(parseInt(opts.id))) {
-      return "Primary key specfied is invalid (incorrect type).";
-    }
+    // if (opts.id != undefined && isNaN(parseInt(opts.id))) {
+    //   return "Primary key specfied is invalid (incorrect type).";
+    // }
 
-    if (opts.fk != undefined && isNaN(parseInt(opts.fk))) {
-      return "Foreign key specfied is invalid (incorrect type).";
-    }
+    // if (opts.fk != undefined && isNaN(parseInt(opts.fk))) {
+    //   return "Foreign key specfied is invalid (incorrect type).";
+    // }
 
     return null;        // falsy
 
@@ -52,7 +52,7 @@ module.exports.bootstrap = async function (done) {
     { name: "Martin Choy", age: 23, birthDate: new Date('2000/01/01') },
     { name: "Kenny Cheng", age: 22, birthDate: new Date('2000/02/02') }
     // etc.
-]);
+  ]);
 
 
   const hash = await sails.bcrypt.hash('123456', saltRounds);
